@@ -1,0 +1,24 @@
+{{> menu}}
+
+
+<section class="ui black segment">
+  <div class="title">
+    {{category.title}}
+  </div>
+  {{> list-woods}}
+  {{> add-wood}}
+   </div>
+    <div class="column">
+      {{> category-image }}
+    </div>
+</section>
+
+<script>
+  const fileInput = document.querySelector(".file-input");
+  fileInput.onchange = () => {
+    if (fileInput.files.length > 0) {
+      const fileName = document.querySelector(".file-name");
+      fileName.textContent = fileInput.files[0].name;
+    }
+  };
+</script>
